@@ -1,0 +1,22 @@
+<!--user table-->
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Website</th>
+        <th>Email</th>
+        <th>Address</th>
+    </tr>
+    <tr class="highlight" *ngFor="let contact of contacts" (click)="openModal('custom-modal-1', contact.id)">
+        <td class="name">{{contact.name}}</td>
+        <td>{{contact.website}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.address.street + ", " + contact.address.city + " "+ contact.address.zipcode}}</td>
+    </tr>
+</table>
+<!--different users' tasks-->
+<jw-modal id="custom-modal-1">
+    <div *ngFor="let task of tasks">
+        <p *ngIf="task.userId==userId">{{task.title}}</p>
+    </div>
+    <span (click)="closeModal('custom-modal-1');"></span>
+</jw-modal>

@@ -1,0 +1,28 @@
+/*style the user table*/
+table {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+th {
+  border-bottom: rgb(233, 232, 232) solid 1px;
+  padding-bottom: 10px;
+}
+td {
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+th,
+td {
+  text-align: left;
+  padding-right: 9em;
+  padding-left: 5px;
+}
+.highlight:hover {
+  background-color: #eeeff0;
+}
+.name {
+  color: rgb(3, 135, 223);
+}
